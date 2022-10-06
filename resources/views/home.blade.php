@@ -76,26 +76,30 @@
                 <h1 class="title m-b-md">
                     Primo progetto Laravel di {{ $nome }} {{ $cognome }}
                 </h1>
-                <h3>Linguaggi studiati</h3>
-                <ul class="languages">
-                    @forelse ($known_languages as $language)
-                        <li>
-                            {{ $language }}
-                        </li>
-                    @empty
-                        <li>Nessun linguaggio</li>
-                    @endforelse
-                </ul>
-                <h3>Frameworks studiati</h3>
-                <ul class="frameworks">
-                    @forelse ($known_frameworks as $framework)
-                        <li>
-                            {{ $framework }}
-                        </li>
-                    @empty
-                        <li>Nessun framework</li>
-                    @endforelse
-                </ul>
+                @if ( isset($known_languages) )
+                    <h3>Linguaggi studiati</h3>
+                    <ul class="languages">
+                        @forelse ($known_languages as $language)
+                            <li>
+                                {{ $language }}
+                            </li>
+                        @empty
+                            <li>Nessun linguaggio</li>
+                        @endforelse
+                    </ul>
+                @endif
+                @if ( isset($known_frameworks) )
+                    <h3>Frameworks studiati</h3>
+                    <ul class="frameworks">
+                        @forelse ($known_frameworks as $framework)
+                            <li>
+                                {{ $framework }}
+                            </li>
+                        @empty
+                            <li>Nessun framework</li>
+                        @endforelse
+                    </ul>
+                @endif
             </div>
         </div>
     </body>
