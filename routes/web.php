@@ -16,7 +16,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $data = [
         'nome' => 'Marco',
-        'cognome' => 'Sangiorgi'
+        'cognome' => 'Sangiorgi',
+        'known_languages' => [
+            'HTML',
+            'CSS',
+            'Javascript',
+            'PHP'
+        ],
+        'known_frameworks' => [
+            'Vue',
+            'Laravel'
+        ]
     ];
     return view('home', $data);
 });
