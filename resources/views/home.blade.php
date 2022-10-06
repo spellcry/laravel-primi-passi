@@ -45,6 +45,7 @@
             }
 
             .title {
+                width: 60%;
                 margin-inline: auto;
                 font-size: 70px;
             }
@@ -68,7 +69,7 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <h1 class="title m-b-md">
-                    Hello World
+                    Primo progetto Laravel di {{ $nome }} {{ $cognome }}
                 </h1>
             </div>
         </div>
